@@ -3,44 +3,44 @@
 git_repos:
   - ansible-pull:
     url: git@github.comcast.com:jtucke01/ansible-pull.git
-    path: "/Users/{{ ansible_user_id }}/git/jtucke01"
+    path: "/Users/{{ ansible_user_id }}/git/jtucke01/ansible-pull"
   - documentation:
     url: git@github.comcast.com:jtucke01/documentation.git
-    path: "/Users/{{ ansible_user_id }}/git/jtucke01"
+    path: "/Users/{{ ansible_user_id }}/git/jtucke01/documentation"
   - ipcdn-tools:
     url: git@github.comcast.com:jtucke01/ipcdn-tools.git
-    path: "/Users/{{ ansible_user_id }}/git/jtucke01"
+    path: "/Users/{{ ansible_user_id }}/git/jtucke01/ipcdn-tools"
   - team-logo:
     url: git@github.comcast.com:jtucke01/team-logo.git
-    path: "/Users/{{ ansible_user_id }}/git/jtucke01"
+    path: "/Users/{{ ansible_user_id }}/git/jtucke01/team-logo"
   - vie-test:
     url: git@github.comcast.com:jtucke01/vie-test.git
-    path: "/Users/{{ ansible_user_id }}/git/jtucke01"
+    path: "/Users/{{ ansible_user_id }}/git/jtucke01/vie-test"
   - cfengine:
     url: git@github.comcast.com:xops-infrastructure/cfengine.git
-    path: "/Users/{{ ansible_user_id }}/git/xops-infrastructure"
+    path: "/Users/{{ ansible_user_id }}/git/xops-infrastructure/cfengine"
   - cdn_tf_secgroup:
     url: git@github.comcast.com:cdn/cdn_tf_secgroup.git
-    path: "/Users/{{ ansible_user_id }}/git/cdn"
+    path: "/Users/{{ ansible_user_id }}/git/cdn/cdn_tf_secgroup"
   - openstack_shared_sg:
     url: git@github.comcast.com:cdn/openstack_shared_sg.git
-    path: "/Users/{{ ansible_user_id }}/git/cdn"
+    path: "/Users/{{ ansible_user_id }}/git/cdn/openstack_shared_sg"
   - misc:
     url: git@github.comcast.com:cdneng/misc.git
-    path: "/Users/{{ ansible_user_id }}/git/cdneng"
+    path: "/Users/{{ ansible_user_id }}/git/cdneng/misc"
   - cdn-dns-aliases:
     url: git@github.comcast.com:cdn-sre/cdn-dns-aliases.git
-    path: "/Users/{{ ansible_user_id }}/git/cdn-sre"
+    path: "/Users/{{ ansible_user_id }}/git/cdn-sre/cdn-dns-aliases"
   - op5-api:
     url: git@github.comcast.com:cdn-sre/op5-api.git
-    path: "/Users/{{ ansible_user_id }}/git/cdn-sre"
+    path: "/Users/{{ ansible_user_id }}/git/cdn-sre/op5-api"
   - pi_encrypted_materials:
     url: git@github.comcast.com:cdn-sre/pi_encrypted_materials.git
-    path: "/Users/{{ ansible_user_id }}/git/cdn-sre"
+    path: "/Users/{{ ansible_user_id }}/git/cdn-sre/pi_encrypted_materials"
   - prod_firmware:
     url: git@github.comcast.com:cdn-sre/prod_firmware.git
-    path: "/Users/{{ ansible_user_id }}/git/cdn-sre"
+    path: "/Users/{{ ansible_user_id }}/git/cdn-sre/prod_firmware"
   - traffic-control-automation:
     url: git@github.comcast.com:cdn-sre/traffic-control-automation.git
-    path: "/Users/{{ ansible_user_id }}/git/cdn-sre"
+    path: "/Users/{{ ansible_user_id }}/git/cdn-sre/traffic-control-automation"
 
