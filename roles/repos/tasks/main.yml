@@ -1,0 +1,10 @@
+---
+
+- name: clone git repos
+  git:
+    repo: "{{ item.url }}"
+    dest: "{{ item.path }}"
+    clone: yes
+    update: no
+  with_items: "{{ git_repos }}"
+

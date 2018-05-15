@@ -2,6 +2,14 @@
 ---
 
 user_files:
+  - cdn:
+    path: "/Users/{{ ansible_user_id }}/.cdn"
+    mode: "0600"
+    content: |
+      export TO_USER=jtucker
+      export TO_PASSWD=XXX
+      # ipcdn-ro
+      export TRAFFIC_OPS_PASSWD=XXX
   - gitconfig:
     path: "/Users/{{ ansible_user_id }}/.gitconfig"
     mode: "0644"

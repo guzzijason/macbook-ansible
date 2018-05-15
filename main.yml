@@ -26,6 +26,7 @@
       - curl
       - dhcpdump
       - fping
+      - git
       - gnupg
       - mtr
       - nmap
@@ -41,3 +42,4 @@
       - xz
       - ykpers
 
+  - include_role: name=repos

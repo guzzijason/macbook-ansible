@@ -28,3 +28,10 @@
     checksum: yes
     src: homedir/
     dest: "/Users/{{ ansible_user_id }}"
+
+- name: openstack profile symlink
+  file:
+    src: "/Users/{{ ansible_user_id }}/git/cdn-sre/traffic-control-automation/.profile"
+    dest: "/Users/{{ ansible_user_id }}/.profile-openstack
+    state: link
+

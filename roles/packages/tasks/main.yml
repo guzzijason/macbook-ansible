@@ -1,0 +1,22 @@
+---
+
+- name: install terraform
+  unarchive:
+    src: https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_darwin_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: install terraform-provider-denis
+  unarchive:
+    src: http://yumrepo.sys.comcast.net/cim/vendor-local/terraform-provider-denis/terraform-provider-denis-darwin_amd64-2.1.8.tar.gz
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: Setup terraform provider
+  blockinfile:
+    block: |
+      providers { "denis" = "/usr/local/bin/terraform-provider-denis" }
+    dest: "/Users/{{ ansible_user_id }}/.terraformrc"
+    mode: 0644
+    create: true
+
