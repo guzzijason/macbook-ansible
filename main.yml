@@ -12,8 +12,6 @@
 
   - include_role: name=files
 
-  - include_role: name=user
-
   - name: homebrew packages
     homebrew:
       name: "{{ item }}"
@@ -42,4 +40,8 @@
       - xz
       - ykpers
 
+  # it may be necessar to fix up gpg-agent and make sure its working
+  # before the following will succeed; just re-run as needed
+
   - include_role: name=repos
+
