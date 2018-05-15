@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/jtucker/.ssh'
+let g:netrw_dirhist_2='/Users/jtucker/git/traffic-control-cli/monkeys'
+let g:netrw_dirhist_3='/Users/jtucker/git/cdn-sre/cdn-ansible/roles/ansible-mirror/tasks'
+let g:netrw_dirhist_4='/Users/jtucker/.ssh'
+let g:netrw_dirhist_5='/private/tmp/ansible/roles/sudoers/templates'
+let g:netrw_dirhist_6='/private/tmp/ansible/roles/sudoers/tasks'
+let g:netrw_dirhist_7='/Users/jtucker/git/cdn/cdn-ansible'
+let g:netrw_dirhist_8='/Users/jtucker/git/pe_vss_odol/prod/modules'

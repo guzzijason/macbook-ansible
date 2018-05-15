@@ -1,0 +1,43 @@
+---
+- hosts: all
+  connection: local
+  become: no
+
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/sbin:/usr/sbin"
+
+  tasks:
+
+  - include_role: name=debug
+
+  - include_role: name=files
+
+  - include_role: name=user
+
+  - name: homebrew packages
+    homebrew:
+      name: "{{ item }}"
+      state: present
+      update_homebrew: yes
+    with_items:
+      - ansible
+      - cpanminus
+      - csshx
+      - curl
+      - dhcpdump
+      - fping
+      - gnupg
+      - mtr
+      - nmap
+      - openssl
+      - pinentry-mac
+      - pwgen
+      - python@2
+      - sphinx-doc
+      - sqlite
+      - tcptraceroute
+      - telnet
+      - watch
+      - xz
+      - ykpers
+

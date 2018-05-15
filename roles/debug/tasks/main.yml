@@ -1,0 +1,9 @@
+# tasks for test/debug purposes
+---
+
+- name: dump vars to a file
+  template:
+    src: dumpvars.j2
+    dest: /tmp/ansible_variables
+  changed_when: false
+

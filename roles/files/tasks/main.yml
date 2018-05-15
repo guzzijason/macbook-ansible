@@ -1,0 +1,27 @@
+---
+
+- name: ensure .ssh directory
+  file:
+    path: "/Users/{{ ansible_user_id }}/.ssh"
+    state: directory
+    mode: 0700
+
+- name: git config
+  blockinfile:
+    block: "{{ gitconfig.0.content | default('#') }}"
+    dest: "/Users/{{ ansible_user_id }}/.gitconfig"
+    mode: 0644
+    create: true
+
+- name: ssh client config
+  blockinfile:
+    block: "{{ ssh_config.0.content | default('#') }}"
+    dest: "/Users/{{ ansible_user_id }}/.ssh/config"
+    mode: 0644
+    create: true
+
+- name: user files
+  synchronize:
+    checksum: yes
+    src: homedir/
+    dest: "/Users/{{ ansible_user_id }}"
