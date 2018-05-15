@@ -1,8 +1,11 @@
 # see: https://galaxy.ansible.com/singleplatform-eng/users/
 ---
 
-gitconfig:
-  - content: |
+user_files:
+  - gitconfig:
+    path: "/Users/{{ ansible_user_id }}/.gitconfig"
+    mode: "0644"
+    content: |
       [http]
         sslVerify = false
       [user]
@@ -13,24 +16,30 @@ gitconfig:
         default = simple
       [commit]
         gpgsign = true
-
-ssh_config:
-  - content: |
+      [alias]
+        tree = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white). %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+  - ssh_config:
+    path: "/Users/{{ ansible_user_id }}/.ssh/config"
+    mode: "0644"
+    content: |
       ServerAliveInterval 60
+      UseRoaming no
 
-      Host github.com
+      Host github.*
         User git
-        Identityfile /Users/jtucker/.ssh/github-id_rsa
-        UseRoaming no
 
       Host *.comcast.net
         User jtucke01
-        UseRoaming no
 
       Host odol-*
         User jtucke01
-        UseRoaming no
 
       Host cdn*
         User jtucke01
-        UseRoaming no
+
+root_files:
+  - crontab:
+    path: /etc/crontab
+    mode: "0644"
+    content: |
+      @reboot launchctl unload –w /Library/LaunchAgents/net.pulsesecure.pulsetray.plist

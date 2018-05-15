@@ -1,0 +1,47 @@
+# see: https://galaxy.ansible.com/singleplatform-eng/users/
+---
+
+gitconfig:
+  - content: |
+      [http]
+        sslVerify = false
+      [user]
+        name = Jason Tucker
+        email = Jason_Tucker@Comcast.com
+        signingkey = CACC4D324B45103E
+      [push]
+        default = simple
+      [commit]
+        gpgsign = true
+
+ssh_config:
+  - content: |
+      ServerAliveInterval 60
+
+      Host *.comcast.net
+        User jtucke01
+        UseRoaming no
+
+      Host odol-*
+        User jtucke01
+        UseRoaming no
+
+      Host cdn*
+        User jtucke01
+        UseRoaming no
+
+test:
+  content: |
+      ServerAliveInterval 60
+
+      Host *.comcast.net
+        User jtucke01
+        UseRoaming no
+
+      Host odol-*
+        User jtucke01
+        UseRoaming no
+
+      Host cdn*
+        User jtucke01
+        UseRoaming no

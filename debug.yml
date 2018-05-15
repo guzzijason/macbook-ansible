@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: local
+  become: no
+
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/sbin:/usr/sbin"
+
+  tasks:
+
+  - include_role: name=debug
+

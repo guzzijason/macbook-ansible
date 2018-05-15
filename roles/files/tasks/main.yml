@@ -6,19 +6,22 @@
     state: directory
     mode: 0700
 
-- name: git config
+- name: user file content
   blockinfile:
-    block: "{{ gitconfig.0.content | default('#') }}"
-    dest: "/Users/{{ ansible_user_id }}/.gitconfig"
-    mode: 0644
+    block: "{{ item.content | default('#') }}"
+    dest: "{{ item.path }}"
+    mode: "{{ item.mode | default('0600') }}"
     create: true
+  with_items: "{{ user_files }}"
 
-- name: ssh client config
+- name: root file content
   blockinfile:
-    block: "{{ ssh_config.0.content | default('#') }}"
-    dest: "/Users/{{ ansible_user_id }}/.ssh/config"
-    mode: 0644
+    block: "{{ item.content | default('#') }}"
+    dest: "{{ item.path }}"
+    mode: "{{ item.mode | default('0600') }}"
     create: true
+  with_items: "{{ root_files }}"
+  become: true
 
 - name: user files
   synchronize:
