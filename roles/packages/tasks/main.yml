@@ -20,3 +20,6 @@
     mode: 0644
     create: true
 
+- name: install dnspython
+  pip: name=dnspython
+

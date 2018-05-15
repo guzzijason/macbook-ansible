@@ -7,4 +7,6 @@ sudo mkdir -p ${BREW_DIR}
 sudo chown ${USER} ${BREW_DIR}
 curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C ${BREW_DIR}
 
+${BREW_DIR}/bin/brew install ansible
+
 $(dirname $0)/ansible.sh

@@ -4,7 +4,7 @@
   become: no
 
   environment:
-    PATH: "{{ ansible_env.PATH }}:/sbin:/usr/sbin"
+    PATH: "{{ ansible_env.PATH }}:/sbin:/usr/sbin:/usr/local/homebrew/bin"
 
   tasks:
 
