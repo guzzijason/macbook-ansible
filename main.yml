@@ -36,6 +36,7 @@
       - sqlite
       - tcptraceroute
       - telnet
+      - tree
       - watch
       - xz
       - ykpers
