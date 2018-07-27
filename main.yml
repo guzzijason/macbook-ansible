@@ -32,6 +32,7 @@
       - pinentry-mac
       - pwgen
       - python@2
+      - ruby
       - sphinx-doc
       - sqlite
       - tcptraceroute
