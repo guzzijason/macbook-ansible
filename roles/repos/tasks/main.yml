@@ -4,6 +4,7 @@
   git:
     repo: "{{ item.url }}"
     dest: "{{ item.path }}"
+    accept_hostkey: yes
     clone: yes
     update: no
   with_items: "{{ git_repos }}"
