@@ -43,4 +43,7 @@ git_repos:
   - traffic-control-automation:
     url: git@github.comcast.com:cdn-sre/traffic-control-automation.git
     path: "/Users/{{ ansible_user_id }}/git/cdn-sre/traffic-control-automation"
+  - automator-apps:
+    url: git@github.com:guzzijason/automator-apps.git
+    path: "/Users/{{ ansible_user_id }}/git/github.com/guzzijason/automator-apps"
 
