@@ -30,6 +30,13 @@
     dest: "/Users/{{ ansible_user_id }}"
     perms: yes
 
+- name: ensure .gnupg directory perms
+  file:
+    path: "/Users/{{ ansible_user_id }}/.gnupg"
+    state: directory
+    mode: 0700
+
+
 - name: openstack profile symlink
   file:
     src: "/Users/{{ ansible_user_id }}/git/cdn-sre/traffic-control-automation/.profile"
