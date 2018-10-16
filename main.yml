@@ -36,6 +36,7 @@
       - ruby
       - sphinx-doc
       - sqlite
+      - terraform_landscape
       - tcptraceroute
       - telnet
       - tree
