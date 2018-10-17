@@ -21,5 +21,8 @@
     create: true
 
 - name: install dnspython
-  pip: name=dnspython
+  pip: name="{{ item }}"
+  with_items:
+    - dnspython
+    - python-gilt
 

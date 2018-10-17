@@ -27,6 +27,7 @@
       - git
       - gnupg
       - go
+      - jq
       - mtr
       - nmap
       - openssl
